@@ -1,0 +1,79 @@
+@import 'extension'
+
+.footer
+    margin-top: 300px
+    &__top
+        border-top: 1px solid #2E2E2E
+        padding: 16px 0
+
+        .wrapper
+            display: flex
+            justify-content: center
+
+        &-link
+            font-weight: 500
+            font-size: 13px
+            line-height: 18px
+            letter-spacing: 0.05em
+            color: #6B6A6A
+
+            .icon-arrow-top
+                margin-left: 14px
+    
+    &__middle
+        background: #131313
+        padding: 60px 0 90px 0
+
+        .wrapper
+            @extend %flex
+
+    &__logo
+
+    &__network
+
+    &__foot-menu
+
+    &__contacs
+
+    &__bottom
+        background: #131313
+        border-top: 1px solid #2E2E2E
+        font-size: 12px
+        line-height: 28px
+        color: #6D6D6D
+        text-align: center
+        padding: 5px 0
+
+.foot-menu
+    &__list
+        @extend %ul
+        @extend %flex
+        max-width: 300px
+    
+    &__item
+        width: calc(50% - 10px)
+
+    &__link
+        font-weight: 500
+        font-size: 13px
+        line-height: 18px
+        letter-spacing: 0.05em
+        color: #A0A0A0
+
+        &:hover
+            @extend %hover
+        
+.foot-contacs
+    &__item
+        display: flex
+        justify-content: flex-star
+        margin-bottom: 14px
+
+    &__icon
+        @extend %hover
+        margin-right: 18px
+
+    &__text
+        font-size: 14px
+        line-height: 19px
+        color: #A0A0A0

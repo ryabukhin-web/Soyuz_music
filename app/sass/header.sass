@@ -1,0 +1,142 @@
+@import 'extension'
+    
+.header
+    border-bottom: 1px solid #2E2E2E
+
+    .wrapper
+        @extend %flex
+
+    &__logo
+    
+    &__top-form
+
+    &__header
+
+.logo
+    &__link
+
+    &__image
+        width: 122px
+
+        &_title
+            width: 226px
+
+.top-menu
+    &__list
+        @extend %flex
+        @extend %ul
+
+    &__item
+        margin-right: 40px
+
+        &:last-child
+            margin-right: 0       
+
+    &__link
+        color: #A0A0A0
+
+        &:hover
+            color: #EB1F1F
+
+.form-toggle
+    border: 1px solid #EB1F1F
+    border-radius: 16px
+    overflow: hidden
+    display: flex
+    align-items: stretch
+    justify-content: center
+
+    &__item
+
+        & input[type=radio]
+            display: none
+
+        & label
+            display: block
+            width: 31px
+            height: 32px
+            padding: 0px
+            line-height: 32px
+            cursor: pointer
+            user-select: none
+            position: relative
+            font-family: IBM Plex Sans
+            font-style: normal
+            font-weight: 500
+            font-size: 15px
+            letter-spacing: 0.03em
+            text-transform: uppercase
+            @extend %hover
+
+            & span
+                display: block
+
+        input[type=radio] + label::before
+            content: ''
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            position: absolute
+            width: 22px
+            height: 22px
+            border-radius: 100%
+            background: linear-gradient(180deg, #EB1F1F 0%, #E95515 100%), #FFFFFF
+            display: block
+
+        input[type=radio]:checked + label::before
+            display: none
+            
+        & input[type=radio] + label
+            & span
+                display: none
+
+        & input[type=radio]:checked + label
+	        & span
+                display: block
+
+        &:nth-child(1)
+            span
+                margin: 0 8px
+
+.network
+    @extend %flex
+
+    &_fixed
+        position: fixed
+        top: 50%
+        left: 20px
+        transform: translate(0, -50%)
+        flex-direction: column
+        
+        .network__link
+            margin: 0 0 16px 0
+            background: #1C1C1C
+            
+            &:last-child
+                margin: 0
+        
+    &__link
+        font-size: 15px
+        margin-right: 10px
+        width: 40px
+        height: 40px
+        border: 1px solid #3F3F3F
+        box-sizing: border-box
+        border-radius: 100%
+        position: relative
+        display: block
+
+        &:last-chaild
+            margin-right: 0
+
+        &:hover
+            border: 1px solid #EB1F1F
+            
+            & span
+                @extend %hover
+           
+    &__icon
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
